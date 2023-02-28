@@ -1,6 +1,6 @@
 # Smart-City-Traffic-Guidance
 
-To run the program in Microsoft Visual Studio, clone the remote repository to a folder of your choice on your local machine. Be sure to cd into the repo folder and use the command 'git checkout branch hurtgen_v2'. Then, create a VS project in the same parent folder as the cloned repository (i.e., outside the cloned repository) and name it 'traffic-management'. Simply drag the following files into the project within the VS solution:
+To run the program in Microsoft Visual Studio, clone the remote repository to a folder of your choice on your local machine. Then, create a VS project in the same parent folder as the cloned repository (i.e., outside the cloned repository). Simply drag the following files into the project within the VS solution:
 
 Header files, path is traffic-management/_src/_include:
 Map.h, 
