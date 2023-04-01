@@ -104,6 +104,8 @@ void ReactiveRouting<V>::scanForCongestion() {
 		ls = road->getLength();
 		v = road->getAvgSpeed();
 		limit = road->getSpeedLimit();
+		// uncomment the line below to recalculate congestion
+		//road->setCongestion(calculateCF(nc, ls, v, limit));
 		congestion = road->getCongestion();
 
 		// push congested roads into the linked list of congested roads
@@ -113,7 +115,7 @@ void ReactiveRouting<V>::scanForCongestion() {
 			road->getSrc() < (no_intersections - ROWS) && road->getDst() < (no_intersections - ROWS) &&
 			road->getSrc() % ROWS != 0 && road->getDst() % ROWS != 0 &&
 			road->getSrc() % ROWS != (ROWS - 1) && road->getDst() % ROWS != (ROWS - 1)) {
-			if (road->getCongestion() > 0.65) {
+			if (road->getCongestion() > 0.5) {
 				curr = congested_roads;
 				// if the list is empty...
 				if (congested_roads == nullptr) {
